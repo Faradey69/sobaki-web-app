@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -9,8 +8,8 @@
   --color-light-beige: #efe9e3;
   --color-accent-hover: #56986e;
 
-  --font-bebas: "Bebas Neue", sans-serif;
-  --font-raleway: "Raleway", sans-serif;
+  --font-bebas: var(--font-bebas-local);
+  --font-raleway: var(--font-raleway-local);
 }
 
 :root {
@@ -36,10 +35,19 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Raleway", sans-serif;
+  font-family: var(--font-raleway-local), sans-serif;
+  font-synthesis: none;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.font-bebas {
+  font-family: var(--font-bebas-local), sans-serif;
+}
+
+.font-raleway {
+  font-family: var(--font-raleway-local), sans-serif;
 }
